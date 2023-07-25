@@ -209,4 +209,7 @@ main > p.login > a{
     :root{
         font-size: 80%;
     }
+    form.reg-form button{
+        width: 200px;
+    }
 }
