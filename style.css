@@ -77,6 +77,11 @@ form.reg-form > label:not(:last-child){
     margin-bottom: 16px;
 }
 
-form.reg-form > :last-child{
+form.reg-form > button{
+    padding: 10px;
     width: 150px;
+    background-color: #596D48;
+    color: white;
+    border: none;
+    font-weight: bolder;
 }
