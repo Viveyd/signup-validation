@@ -23,27 +23,27 @@
         <form class="reg-form" action="">
             <label class="fn-con">
                 First Name
-                <input type="text">
+                <input type="text" required>
             </label>
             <label class="ln-con">
                 Last Name
-                <input type="text">
+                <input type="text" required>
             </label>
             <label class="email-con">
                 Email
-                <input type="email">
+                <input type="email" required>
             </label>
             <label class="phone-con">
                 Phone Number
-                <input type="text">
+                <input type="text" required>
             </label>
             <label class="pw-con">
                 Password
-                <input type="password">
+                <input type="password" required>
             </label>
             <label class="cpw-con">
                 Confirm Password
-                <input type="password">
+                <input type="password" required>
             </label>
             <div class="button-con">
                 <button type="submit"> Create Account </button>
@@ -55,6 +55,41 @@
         </p>
     </main>
     <script>
+        const pw1 = document.querySelector(".pw-con input");
+        const pw2 = document.querySelector(".cpw-con input");
+
+        document.querySelectorAll("input").forEach(control => {
+            control.addEventListener("keyup", activateValidation)
+        })
+
+        function activateValidation(e){
+            if(e.target === pw1 || e.target == pw2){
+                pw1.removeEventListener("keyup", activateValidation);
+                pw2.removeEventListener("keyup", activateValidation);
+                pw1.addEventListener("keyup", matchPasswords);
+                pw2.addEventListener("keyup", matchPasswords);
+                pw1.classList.add("validate-on");
+                pw2.classList.add("validate-on");
+                matchPasswords();
+            } else {
+                e.target.removeEventListener("keyup", activateValidation); // so this func runs only once for each control
+                e.target.classList.add("validate-on");
+            } 
+        }
+        
+        function matchPasswords(){
+            if(pw1.value !== pw2.value){
+                pw1.setCustomValidity("error");
+                pw2.setCustomValidity("error");
+                pw1.parentElement.classList.add("show-error")
+            } else {
+                pw1.setCustomValidity("");
+                pw2.setCustomValidity("");
+                pw1.parentElement.classList.remove("show-error")
+            }
+            pw1.checkValidity();
+            pw2.checkValidity();
+        }
     </script>
 </body>
-</html>
+</html> 

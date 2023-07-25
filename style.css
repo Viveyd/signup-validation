@@ -137,6 +137,26 @@ main > p.login > a{
     color: #596D48;
 }
 
+
+input.validate-on:valid{
+    border-color: lightgreen;
+}
+
+input.validate-on:invalid{
+    border-color: red;
+}
+
+label.pw-con.show-error::after{
+    content: "Passwords do not match!";
+    color: red;
+}
+
+
+
+
+
+
+
 @media screen and (min-width: 550px){
     :root{
         font-size: 70%;
@@ -201,7 +221,6 @@ main > p.login > a{
     }
     .logo-header-con > h1{
         font-size: 8rem;
-        margin: 24px;
     }
 }
 
@@ -213,3 +232,4 @@ main > p.login > a{
         width: 200px;
     }
 }
+
