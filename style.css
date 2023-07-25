@@ -98,6 +98,7 @@ form.reg-form .button-con{
 
 form.reg-form button{
     padding: 10px;
+    font-size: 1.4rem;
     width: 150px;
     background-color: #596D48;
     color: white;
@@ -115,3 +116,10 @@ main > p.login > a{
     font-weight: bold;
     color: #596D48;
 }
+
+@media screen and (min-width: 550px){
+    :root{
+        font-size: 70%;
+    }
+}
+
