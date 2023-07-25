@@ -71,10 +71,21 @@ form.reg-form{
 form.reg-form > label{
     display: flex;
     flex-direction: column;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
 }
 
-form.reg-form > label:not(:last-child){
-    margin-bottom: 16px;
+form.reg-form > label > input{
+    height: 25px;
+    padding: 5px;
+    border: none;
+    border: 1px solid #afb0b3;
+    border-radius: 4px;
+}
+
+form.reg-form > label > input:focus{
+    outline: none;
+    border-color: blue;
 }
 
 form.reg-form > button{
