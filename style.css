@@ -96,3 +96,14 @@ form.reg-form > button{
     border: none;
     font-weight: bolder;
 }
+
+main > p.login{
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+main > p.login > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #596D48;
+}
