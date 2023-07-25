@@ -10,39 +10,42 @@
 
 body{
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 200px 1fr;
     height: 100vh;
     margin: 0;
 }
 
 header{
-    position: sticky;
-    top: 0;
-
     box-sizing: border-box;
     width: 100%;
-    padding: 16px;
-    
+    padding: 16px 0 16px 0;
     border-bottom: 1px solid grey;
-    background: url("./assets/bg.jpg");
+
+    background: url("./assets/bg.jpg") no-repeat center/cover;
+
     display: flex;
+    align-items: center;
     
 }
 
 header > .logo-header-con{  
     display: flex;
     align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    
     width: 100%;
-    gap: 16px;
+    height: min-content;
+    gap: 4px;
 }
 
 .logo-header-con > img{
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
 }
 
 .logo-header-con > h1{
-    font-size: 4rem;
+    font-size: 5rem;
     font-family: "Norse Bold";
     color: white;
 }
@@ -130,7 +133,18 @@ main > p.login > a{
     body{
         grid-template-rows: unset;
         grid-template-columns: 1fr 2fr;
+        background-position: center;
+        background-size: contain;
     }
+    header{
+        display: unset;
+        position: relative;
+    }
+    header > .logo-header-con{
+        position: relative;
+        top: 200px;
+    }
+    
     main{
         display: flex;
         flex-direction: column;
@@ -145,8 +159,16 @@ main > p.login > a{
     }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1068px){
     :root{
         font-size: 80%;
+    }
+    .logo-header-con > img{
+        width: 115px;
+        height: 120px;
+    }
+    .logo-header-con > h1{
+        font-size: 8rem;
+        margin: 24px;
     }
 }
