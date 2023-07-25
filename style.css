@@ -123,3 +123,30 @@ main > p.login > a{
     }
 }
 
+@media screen and (min-width: 650px){
+    :root{
+        font-size: 66%;
+    }
+    body{
+        grid-template-rows: unset;
+        grid-template-columns: 1fr 2fr;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 48px;
+    }
+    main > *{
+        max-width: 660px;
+    }
+    form.reg-form > label{
+        flex: 1 0 300px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    :root{
+        font-size: 80%;
+    }
+}
