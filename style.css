@@ -66,7 +66,9 @@ article.preface :nth-child(2){
 
 form.reg-form{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0px 16px;
+    
 }
 
 form.reg-form > label{
@@ -74,6 +76,7 @@ form.reg-form > label{
     flex-direction: column;
     margin-bottom: 16px;
     font-size: 1.3rem;
+    flex: 1 0 200px;
 }
 
 form.reg-form > label > input{
@@ -89,7 +92,11 @@ form.reg-form > label > input:focus{
     border-color: blue;
 }
 
-form.reg-form > button{
+form.reg-form .button-con{
+    flex: 1 0 100%;
+}
+
+form.reg-form button{
     padding: 10px;
     width: 150px;
     background-color: #596D48;
