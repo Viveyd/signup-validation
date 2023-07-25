@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Norse Bold";
+    src: url("./assets/Norse-Bold.otf");
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    height: 100vh;
+    margin: 0;
+}
+
+header{
+    position: sticky;
+    top: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    
+    border-bottom: 1px solid grey;
+    background: url("./assets/bg.jpg");
+    display: flex;
+    
+}
+
+header > .logo-header-con{  
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+}
+
+.logo-header-con > img{
+    width: 60px;
+    height: 60px;
+}
+
+.logo-header-con > h1{
+    font-size: 4rem;
+    font-family: "Norse Bold";
+    color: white;
+}
+
+main{
+    box-sizing: border-box;
+    padding: 16px;
+    padding-top: 0;
+    width: 100%;
+}
+
+article.preface > p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+article.preface :nth-child(2){
+    margin-bottom: 32px;
+}
+
+
+form.reg-form{
+    display: flex;
+    flex-direction: column;
+}
+
+form.reg-form > label{
+    display: flex;
+    flex-direction: column;
+}
+
+form.reg-form > label:not(:last-child){
+    margin-bottom: 16px;
+}
+
+form.reg-form > :last-child{
+    width: 150px;
+}
